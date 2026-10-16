@@ -1,0 +1,5 @@
+{
+  "DOG_THRESHOLD": 0.35,
+  "PROB_THRESHOLD": 0.5,
+  "GAP_THRESHOLD": 0.0
+}

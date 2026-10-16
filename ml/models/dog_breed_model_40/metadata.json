@@ -1,0 +1,55 @@
+{
+  "num_breeds": 40,
+  "split": {
+    "train": 4200,
+    "val": 880,
+    "test": 920
+  },
+  "images_per_breed": 150,
+  "random_seed": 42,
+  "feature_extractor": "ResNet18 (ImageNet weights), fc replaced by Identity, 512-D",
+  "preprocessing": "Resize 224x224, ToTensor, ImageNet normalization",
+  "classifier": "SVC(kernel=rbf, C=1, probability=True)",
+  "scaler": "StandardScaler fitted on training features only",
+  "validation_results": [
+    {
+      "Classifier": "KNN",
+      "Accuracy": 77.61,
+      "Precision": 78.97,
+      "Recall": 77.61,
+      "F1-score": 76.71
+    },
+    {
+      "Classifier": "SVM",
+      "Accuracy": 84.55,
+      "Precision": 84.92,
+      "Recall": 84.55,
+      "F1-score": 84.11
+    },
+    {
+      "Classifier": "Decision Tree",
+      "Accuracy": 52.84,
+      "Precision": 53.96,
+      "Recall": 52.84,
+      "F1-score": 52.74
+    },
+    {
+      "Classifier": "MLP",
+      "Accuracy": 83.18,
+      "Precision": 83.31,
+      "Recall": 83.18,
+      "F1-score": 82.87
+    }
+  ],
+  "test_results": {
+    "accuracy": 86.09,
+    "precision": 86.4,
+    "recall": 86.09,
+    "f1": 85.82,
+    "top3_accuracy": 97.61
+  },
+  "versions": {
+    "torch": "2.11.0+cu130",
+    "sklearn": "1.6.1"
+  }
+}
